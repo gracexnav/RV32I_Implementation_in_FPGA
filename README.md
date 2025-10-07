@@ -1,10 +1,10 @@
 # SINGLE CYCLE RV32I IMPLEMENTATION IN FPGA
----
-In this project, we have implemented RISC V with base instructions \(RV32I\) in Vivado. The processor was implemented in Basys 3 Artix 7 FPGA board. All the base instructions were implemented expect 3 \(ecall, ebreak anf fence\). They were also tested using two programs: one for checking all instructions and other for finding the nth Fibonacci number.
+
+In this project, we have implemented RISC V with base instructions \(RV32I\) in Vivado. The processor was implemented in the Basys 3 Artix 7 FPGA board. All the base instructions were implemented expect 3 \(ecall, ebreak and fence\). They were also tested using two programs: one for checking all instructions and the other for finding the nth Fibonacci number.
 
 
 ## BLOCK DIAGRAM
-
+![Block Diagram](BlockDiagram.jpg)
 
 
 ## MODULES IMPLEMENTED
@@ -14,7 +14,7 @@ In this project, we have implemented RISC V with base instructions \(RV32I\) in 
 
 - *CONTROL UNIT*- A combinational logic block that generates all control signals for the data path based on the fields of the current instruction.
 
-- *DATA SIGN EXTEND*- Based on the signed or unsigned load, The result is provided accordingly in the RESULTMUX.
+- *DATA SIGN EXTEND*- Based on the signed or unsigned load, the result is provided accordingly in the RESULTMUX.
 
 - *DATA MEMORY*- Stores program data. It's a read/write memory.
 
@@ -99,13 +99,16 @@ done:
 ```
 
 ### Result
-
-
+![result](res_test_1.jpg)
+![result](res_test_2.jpg)
 
 ## POWER AND UTILIZATION
 The power and utilization results provided by Vivado are included here after the implementation process.
 
-Important point: During synthesis, for fibonacci program since most of the registers are not used, they were removed with other unused components automatically. 
+![result](power_n_util.jpg)
+![result](power.jpg)
+
+Important point: During synthesis, for the Fibonacci program, since most of the registers are not used, they were removed with other unused components automatically. 
 
 ## IMPROVEMENTS THAT CAN BE MADE
 - Testbench can be included to make testing very easier.
@@ -113,4 +116,5 @@ Important point: During synthesis, for fibonacci program since most of the regis
 - The hardware can be further optimized based on the time availability for the project.
 
 ## CONCLUSION
+
 This project was done through a lot of trials and errors. We learnt a lot about implementing a processor. I hope this open source code helps others who want to try implementing a RISC V processor.

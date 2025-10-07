@@ -1,10 +1,10 @@
 # SINGLE CYCLE RV32I IMPLEMENTATION IN FPGA
 
-In this project, we have implemented RISC V with base instructions \(RV32I\) in Vivado. The processor was implemented in the Basys 3 Artix 7 FPGA board. All the base instructions were implemented expect 3 \(ecall, ebreak and fence\). They were also tested using two programs: one for checking all instructions and the other for finding the nth Fibonacci number.
+In this project, we have implemented RISC-V with base instructions \(RV32I\) in Vivado. The processor was implemented in the Basys 3 Artix 7 FPGA board. All the base instructions were implemented except 3 \(ecall, ebreak, and fence\). They were also tested using two programs: one for checking all instructions and the other for finding the nth Fibonacci number.
 
 
 ## BLOCK DIAGRAM
-![Block Diagram](BlockDiagram.jpg)
+![Block Diagram](BlockDiagram.png)
 
 
 ## MODULES IMPLEMENTED
@@ -99,22 +99,23 @@ done:
 ```
 
 ### Result
-![result](res_test_1.jpg)
-![result](res_test_2.jpg)
+![result](res_test_1.png)
+![result](res_test_2.png)
 
 ## POWER AND UTILIZATION
 The power and utilization results provided by Vivado are included here after the implementation process.
 
-![result](power_n_util.jpg)
-![result](power.jpg)
+![result](power_n_util.png)
+![result](power.png)
 
 Important point: During synthesis, for the Fibonacci program, since most of the registers are not used, they were removed with other unused components automatically. 
 
 ## IMPROVEMENTS THAT CAN BE MADE
-- Testbench can be included to make testing very easier.
+- Testbench can be included to make testing much easier.
 - The naming can be made uniform to avoid confusion.
 - The hardware can be further optimized based on the time availability for the project.
 
 ## CONCLUSION
 
-This project was done through a lot of trials and errors. We learnt a lot about implementing a processor. I hope this open source code helps others who want to try implementing a RISC V processor.
+This project was undertaken through numerous trials and errors. We learnt a lot about implementing a processor. This open-source code helps others who want to try implementing a RISC-V processor.
+

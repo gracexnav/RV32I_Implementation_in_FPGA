@@ -4,7 +4,7 @@ In this project, we have implemented RISC-V with base instructions \(RV32I\) in 
 
 
 ## BLOCK DIAGRAM
-![Block Diagram](BlockDiagram.png)
+![Block Diagram](BlockDiagram.jpeg)
 
 
 ## MODULES IMPLEMENTED
@@ -118,4 +118,5 @@ Important point: During synthesis, for the Fibonacci program, since most of the 
 ## CONCLUSION
 
 This project was undertaken through numerous trials and errors. We learnt a lot about implementing a processor. This open-source code helps others who want to try implementing a RISC-V processor.
+
 
